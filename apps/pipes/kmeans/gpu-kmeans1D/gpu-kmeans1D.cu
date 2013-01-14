@@ -1,0 +1,303 @@
+/***********************************************************************
+ 	hadoop-gpu
+	Authors: Koichi Shirahata, Hitoshi Sato, Satoshi Matsuoka
+
+This software is licensed under Apache License, Version 2.0 (the  "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-------------------------------------------------------------------------
+File: gpu-kmeans1D.cc
+ - Kmeans with 1D input data on GPU.
+Version: 0.20.1
+***********************************************************************/
+
+#include "stdint.h"
+
+#include "hadoop/Pipes.hh"
+#include "hadoop/TemplateFactory.hh"
+#include "hadoop/StringUtils.hh"
+
+#include <cuda.h>
+#include <cuda_runtime.h>
+
+#include <iostream>
+#include <cstdlib>
+
+#include <time.h>
+#include <sys/time.h>
+
+//#define DEBUG
+
+// datum of a plot
+// pos : coordinate
+// cent : id of nearest cluster
+class data {
+public:
+  float pos;
+  int cent;
+};
+
+//data object assignment
+__global__ void assign_data(float *centroids,
+			    data *data,
+			    int num_of_data,
+			    int num_of_cluster)
+{
+  int i;
+  int tid = threadIdx.x;
+  int nthreads = blockDim.x;
+  int part = num_of_data / nthreads;
+  for(i = part*tid; i < part*(tid+1); i++) {
+    int center = 0;
+    float dmin = abs(centroids[0] - data[i].pos);
+    for(int j = 1; j < num_of_cluster; j++) {
+      float dist = abs(centroids[j] - data[i].pos);
+      if(dist < dmin) {
+	dmin = dist;
+	center = j;
+      }
+    }
+    data[i].cent = center;
+  }
+}
+
+//K centroids recalculation
+//tid has to be less than the num of newcent
+__global__ void centroids_recalc(
+           float *newcent,
+	   data *d,
+	   int *ndata) {
+  int j;
+  int tid = threadIdx.x;
+  newcent[tid] = 0.0;
+  for(j = ndata[tid]; j < ndata[tid+1]; j++) {
+    newcent[tid] += d[j].pos;
+  }
+  newcent[tid] /= static_cast<float>(ndata[tid+1]-ndata[tid]);
+}
+
+
+class KmeansMap: public HadoopPipes::Mapper {
+public:
+  KmeansMap(HadoopPipes::TaskContext& context){}
+  
+  double gettime() {
+    struct timeval tv;
+    gettimeofday(&tv,NULL);
+    return tv.tv_sec+tv.tv_usec * 1e-6;
+  }
+
+  //zero init
+  void init_int(int *data, int num) {
+    for(int i = 0; i < num; i++) {
+      data[i] = 0;
+    }
+  }
+  void init_float(float *data, int num) {
+    for(int i = 0; i < num; i++) {
+      data[i] = 0.0;
+    }
+  }
+  
+  void sort_by_cent(data *d, int start, int end) 
+  {
+    int i = start;
+    int j = end;
+    int base = (d[start].cent + d[end].cent) / 2;
+    while(1) {
+      while (d[i].cent < base) i++;
+      while (d[j].cent > base) j--;      
+      if (i >= j) break;      
+      data temp = d[i];
+      d[i] = d[j];
+      d[j] = temp;      
+      i++;
+      j--;
+    }
+    if (start < i-1) sort_by_cent(d, start, i-1);
+    if (end > j+1)  sort_by_cent(d, j+1, end);
+  } 
+
+  //counts the nunber of data objects contained by each cluster   
+  void count_data_in_cluster(data *d, int *ndata,
+			     int num_of_data, int num_of_cluster) {
+    int i;
+    for(i = 0; i < num_of_data; i++) {
+      ndata[d[i].cent + 1]++;
+    }
+    for(i = 1; i < num_of_cluster + 1; i++) {
+      ndata[i] += ndata[i-1];
+    }
+  } 
+
+  bool floatcmp(float *a, float *b, int num) {
+    for(int i = 0; i < num; i++) {
+      if(a[i] != b[i]) {
+	return false;
+      }
+    }
+    return true;
+  }
+
+  void map(HadoopPipes::MapContext& context) {
+    // input format
+    // --num of clusters ( == k)
+    // --num of data( == n)
+    // --initial centers for all clusters;
+    // --input rows;
+
+    double t[10];
+    t[0] = gettime();
+
+    std::vector<std::string> elements 
+      = HadoopUtils::splitString(context.getInputValue(), " ");
+
+    t[1] = gettime();
+
+    const int k = HadoopUtils::toInt(elements[0]);
+    const int n = HadoopUtils::toInt(elements[1]);
+    // c[] : pos of cluster
+    // d[] : data
+    // ndata[] : num of data for each cluster
+    float c[2][k];
+    data d[n];
+    int ndata[k+1];
+    int i, cur, next;
+
+    //for Device
+    float *dc;
+    data *dd;
+    int *dndata;
+
+    //initialize
+    for(i = 0; i < k; i++) {
+      c[0][i] = HadoopUtils::toFloat(elements[i+2]);
+    }
+    for(i = 0; i < n; i++) {
+      d[i].pos = HadoopUtils::toFloat(elements[i+k+2]);
+    }
+
+    t[2] = gettime();
+
+#ifdef DEBUG
+    for(i = 0; i < k; i++) {
+      std::cout << c[0][i] << " ";
+    }
+    std::cout << '\n';
+    for(i = 0; i < n; i++)
+      std::cout << d[i].pos << " ";
+    std::cout << "\n\n";
+#endif
+
+    //cuda init
+    cudaMalloc((void **)&dc, sizeof(float)*2*k);
+    cudaMalloc((void **)&dd, sizeof(data)*n);
+    cudaMalloc((void **)&dndata, sizeof(int)*k);
+
+    t[3] = gettime();
+
+    // buffer id
+    cur = 0;
+    next = 1;
+
+    //    do {
+    for(int j = 0; j < 10; j++) {
+      init_int(ndata, k+1);
+
+      //data object assignment
+      cudaMemcpy(dc + cur*k, c[cur], sizeof(float)*k, cudaMemcpyHostToDevice);
+      cudaMemcpy(dd, d, sizeof(data)*n, cudaMemcpyHostToDevice);
+      assign_data<<<1,32>>>(dc + cur*k, dd, n, k);
+      cudaMemcpy(d, dd, sizeof(data)*n, cudaMemcpyDeviceToHost);
+    
+      t[4] = gettime();
+
+
+
+#ifdef DEBUG
+      for(i = 0; i < n; i++)
+	std::cout << d[i].cent << " ";
+      std::cout << '\n';
+#endif
+
+      //rearranges all data objects
+      //and counts the nunber of data objects contained by each cluster 
+      sort_by_cent(d, 0, n-1);
+      count_data_in_cluster(d, ndata, n, k);
+
+      t[5] = gettime();
+
+
+#ifdef DEBUG
+      for(i = 0; i < k+1; i++)
+	std::cout << ndata[i] << " ";
+      std::cout << '\n';
+#endif
+
+      //K centroids recalculation
+      cudaMemcpy(dndata, ndata, sizeof(int)*(k+1), cudaMemcpyHostToDevice);
+      cudaMemcpy(dc + next*k, c[next], sizeof(float)*k, cudaMemcpyHostToDevice);
+      cudaMemcpy(dd, d, sizeof(data)*n, cudaMemcpyHostToDevice);
+      centroids_recalc<<<1,k>>>(dc + next*k, dd, dndata);
+      cudaMemcpy(c[next], dc + next*k, sizeof(float)*k, cudaMemcpyDeviceToHost);
+
+
+      t[6] = gettime();
+
+
+#ifdef DEBUG
+      for(i = 0; i < k; i++)
+	std::cout << c[next][i] << " ";
+      std::cout << "\n\n";
+#endif
+
+      cur = 1 - cur;
+      next = 1 - next;
+      //    } while( floatcmp(c[cur], c[next], k) == false );
+    }
+
+    //emit 
+    //key : cluster id
+    //value : cluster centroid position
+    for(i = 0; i < k; i++) {
+      context.emit(context.getInputKey() + "\t" + HadoopUtils::toString(i),
+		   HadoopUtils::toString(c[cur][i]));
+    }
+
+
+    t[7] = gettime();
+
+    for(i = 0; i < 7; i++) {
+      std::cout << t[i+1] - t[i] << '\n';
+    }
+    std::cout << '\n';
+
+
+    cudaFree(dc);
+    cudaFree(dd);
+    cudaFree(dndata);
+  }
+};
+
+class KmeansReduce: public HadoopPipes::Reducer {
+public:
+  KmeansReduce(HadoopPipes::TaskContext& context){}
+  void reduce(HadoopPipes::ReduceContext& context) {
+    while(context.nextValue()) {
+      context.emit(context.getInputKey(), context.getInputValue());
+    }
+  }
+};
+
+int main(int argc, char *argv[]) {
+  return HadoopPipes::runTask(HadoopPipes::TemplateFactory<KmeansMap,
+                                                           KmeansReduce>());
+}

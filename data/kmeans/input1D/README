@@ -1,0 +1,9 @@
+How to make input file
+
+$ ./make_ki k n numiter fname
+
+1: k; the number of centroids
+2: n; the number of data
+3: numiter; the number of dataset(which include k, n, and data for each line)
+4: fname; output file name (which contains k, n, and data, for kmeans input)
+

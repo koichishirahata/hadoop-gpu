@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for iii in `ls /tmp/hadoop*.pid`
+do
+kill `more $iii`
+done
+
+rm -f /tmp/hadoop*.pid

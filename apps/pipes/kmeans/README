@@ -1,0 +1,8 @@
+this package includes below
+
+cpu-kmeans1D: 1D kmeans run on CPU
+gpu-kmeans1D: 1D kmeans run on GPU
+cpu-kmeans2D: 2D kmeans run on CPU
+gpu-kmeans2D: 2D kmeans run on GPU
+input1D: 1D input files and the file to make 1D input file
+input2D: 2D input files and the file to make 2D input file

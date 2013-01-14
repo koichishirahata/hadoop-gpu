@@ -1,0 +1,652 @@
+WARN    (2009-09-01) 20:58.25:600   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: ComponentLocator exception from parent SM during lookup.
+org.apache.avalon.framework.service.ServiceException: Component for key 'org.apache.excalibur.source.SourceResolver' not found. (Key='Cocoon')
+	at org.apache.cocoon.core.container.SingleComponentServiceManager.lookup(SingleComponentServiceManager.java:68)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.service(TreeProcessor.java:197)
+	at org.apache.avalon.framework.container.ContainerUtil.service(ContainerUtil.java:143)
+	at org.apache.cocoon.core.container.ComponentFactory.setupInstance(ComponentFactory.java:150)
+	at org.apache.cocoon.core.container.ComponentFactory.newInstance(ComponentFactory.java:133)
+	at org.apache.cocoon.core.container.handler.ThreadSafeComponentHandler.doInitialize(ThreadSafeComponentHandler.java:54)
+	at org.apache.cocoon.core.container.handler.AbstractComponentHandler.initialize(AbstractComponentHandler.java:274)
+	at org.apache.cocoon.core.container.handler.LazyHandler.getDelegate(LazyHandler.java:53)
+	at org.apache.cocoon.core.container.handler.LazyHandler.get(LazyHandler.java:71)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:427)
+	at org.apache.cocoon.Cocoon.initialize(Cocoon.java:260)
+	at org.apache.avalon.framework.container.ContainerUtil.initialize(ContainerUtil.java:244)
+	at org.apache.cocoon.core.CoreUtil.createProcessor(CoreUtil.java:758)
+	at org.apache.cocoon.core.CoreUtil.createCocoon(CoreUtil.java:717)
+	at org.apache.cocoon.bean.CocoonWrapper.initialize(CocoonWrapper.java:129)
+	at org.apache.cocoon.bean.CocoonBean.initialize(CocoonBean.java:97)
+	at org.apache.cocoon.Main.main(Main.java:310)
+WARN    (2009-09-01) 20:58.25:620   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: ComponentLocator exception from parent SM during lookup.
+org.apache.avalon.framework.service.ServiceException: Component for key 'org.apache.cocoon.components.fam.SitemapMonitor' not found. (Key='Cocoon')
+	at org.apache.cocoon.core.container.SingleComponentServiceManager.lookup(SingleComponentServiceManager.java:68)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.service(TreeProcessor.java:198)
+	at org.apache.avalon.framework.container.ContainerUtil.service(ContainerUtil.java:143)
+	at org.apache.cocoon.core.container.ComponentFactory.setupInstance(ComponentFactory.java:150)
+	at org.apache.cocoon.core.container.ComponentFactory.newInstance(ComponentFactory.java:133)
+	at org.apache.cocoon.core.container.handler.ThreadSafeComponentHandler.doInitialize(ThreadSafeComponentHandler.java:54)
+	at org.apache.cocoon.core.container.handler.AbstractComponentHandler.initialize(AbstractComponentHandler.java:274)
+	at org.apache.cocoon.core.container.handler.LazyHandler.getDelegate(LazyHandler.java:53)
+	at org.apache.cocoon.core.container.handler.LazyHandler.get(LazyHandler.java:71)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:427)
+	at org.apache.cocoon.Cocoon.initialize(Cocoon.java:260)
+	at org.apache.avalon.framework.container.ContainerUtil.initialize(ContainerUtil.java:244)
+	at org.apache.cocoon.core.CoreUtil.createProcessor(CoreUtil.java:758)
+	at org.apache.cocoon.core.CoreUtil.createCocoon(CoreUtil.java:717)
+	at org.apache.cocoon.bean.CocoonWrapper.initialize(CocoonWrapper.java:129)
+	at org.apache.cocoon.bean.CocoonBean.initialize(CocoonBean.java:97)
+	at org.apache.cocoon.Main.main(Main.java:310)
+WARN    (2009-09-01) 20:58.25:828   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: ComponentLocator exception from parent SM during lookup.
+org.apache.avalon.framework.service.ServiceException: Component for key 'org.apache.cocoon.components.treeprocessor.TreeBuilder/sitemap-1.0' not found. (Key='Cocoon')
+	at org.apache.cocoon.core.container.SingleComponentServiceManager.lookup(SingleComponentServiceManager.java:68)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.getTreeBuilder(TreeProcessor.java:375)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.buildConcreteProcessor(TreeProcessor.java:720)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.setupConcreteProcessor(TreeProcessor.java:394)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:288)
+	at org.apache.cocoon.Cocoon.process(Cocoon.java:557)
+	at org.apache.cocoon.bean.CocoonWrapper.getPage(CocoonWrapper.java:426)
+	at org.apache.cocoon.bean.CocoonBean.processTarget(CocoonBean.java:496)
+	at org.apache.cocoon.bean.CocoonBean.process(CocoonBean.java:357)
+	at org.apache.cocoon.Main.main(Main.java:311)
+WARN    (2009-09-01) 20:58.26:169   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: ComponentLocator exception from parent SM during lookup.
+org.apache.avalon.framework.service.ServiceException: Component for key 'org.apache.cocoon.caching.Cache' not found. (Key='Cocoon')
+	at org.apache.cocoon.core.container.SingleComponentServiceManager.lookup(SingleComponentServiceManager.java:68)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.components.pipeline.impl.BaseCachingProcessingPipeline.parameterize(BaseCachingProcessingPipeline.java:61)
+	at org.apache.cocoon.components.pipeline.impl.AbstractCachingProcessingPipeline.parameterize(AbstractCachingProcessingPipeline.java:115)
+	at org.apache.avalon.framework.container.ContainerUtil.parameterize(ContainerUtil.java:228)
+	at org.apache.cocoon.core.container.ComponentFactory.setupInstance(ComponentFactory.java:157)
+	at org.apache.cocoon.core.container.ComponentFactory.newInstance(ComponentFactory.java:133)
+	at org.apache.cocoon.core.container.handler.NonThreadSafePoolableComponentHandler.getFromPool(NonThreadSafePoolableComponentHandler.java:165)
+	at org.apache.cocoon.core.container.handler.NonThreadSafePoolableComponentHandler.doGet(NonThreadSafePoolableComponentHandler.java:238)
+	at org.apache.cocoon.core.container.handler.AbstractComponentHandler.get(AbstractComponentHandler.java:181)
+	at org.apache.cocoon.core.container.handler.LazyHandler.get(LazyHandler.java:71)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:427)
+	at org.apache.cocoon.core.container.DefaultServiceSelector.select(DefaultServiceSelector.java:141)
+	at org.apache.cocoon.components.treeprocessor.sitemap.ComponentsSelector.select(ComponentsSelector.java:109)
+	at org.apache.cocoon.components.treeprocessor.InvokeContext.getProcessingPipeline(InvokeContext.java:158)
+	at org.apache.cocoon.components.treeprocessor.sitemap.GenerateNode.invoke(GenerateNode.java:70)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:55)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PreparableMatchNode.invoke(PreparableMatchNode.java:116)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:55)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PreparableMatchNode.invoke(PreparableMatchNode.java:116)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:155)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:95)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:292)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.buildPipeline(ConcreteTreeProcessor.java:239)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.buildPipeline(TreeProcessor.java:302)
+	at org.apache.cocoon.components.source.impl.SitemapSource.init(SitemapSource.java:266)
+	at org.apache.cocoon.components.source.impl.SitemapSource.<init>(SitemapSource.java:146)
+	at org.apache.cocoon.components.source.impl.SitemapSourceFactory.getSource(SitemapSourceFactory.java:65)
+	at org.apache.cocoon.components.source.CocoonSourceResolver.resolveURI(CocoonSourceResolver.java:159)
+	at org.apache.cocoon.components.source.CocoonSourceResolver.resolveURI(CocoonSourceResolver.java:189)
+	at org.apache.forrest.locationmap.LocationMapModule.getLocationMap(LocationMapModule.java:95)
+	at org.apache.forrest.locationmap.LocationMapModule.getAttribute(LocationMapModule.java:203)
+	at org.apache.cocoon.components.treeprocessor.variables.PreparedVariableResolver.processModule(PreparedVariableResolver.java:246)
+	at org.apache.cocoon.components.treeprocessor.variables.PreparedVariableResolver.resolve(PreparedVariableResolver.java:197)
+	at org.apache.cocoon.components.treeprocessor.sitemap.SelectNode.invoke(SelectNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:155)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:95)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:292)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:223)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:289)
+	at org.apache.cocoon.Cocoon.process(Cocoon.java:557)
+	at org.apache.cocoon.bean.CocoonWrapper.getPage(CocoonWrapper.java:426)
+	at org.apache.cocoon.bean.CocoonBean.processTarget(CocoonBean.java:496)
+	at org.apache.cocoon.bean.CocoonBean.process(CocoonBean.java:357)
+	at org.apache.cocoon.Main.main(Main.java:311)
+ERROR   (2009-09-01) 20:58.26:400   [cocoon.manager] (Unknown-URI) Unknown-Thread/SelectNode: Ignoring locationmap config exception: Unable to build LocationMap.
+org.apache.avalon.framework.configuration.ConfigurationException: Unable to build LocationMap.
+	at org.apache.forrest.locationmap.lm.MountNode.loadConfiguration(MountNode.java:129)
+	at org.apache.forrest.locationmap.lm.MountNode.getLocationMap(MountNode.java:87)
+	at org.apache.forrest.locationmap.lm.MountNode.locate(MountNode.java:157)
+	at org.apache.forrest.locationmap.lm.SelectNode.locate(SelectNode.java:110)
+	at org.apache.forrest.locationmap.lm.LocatorNode.locate(LocatorNode.java:122)
+	at org.apache.forrest.locationmap.lm.LocationMap.locate(LocationMap.java:276)
+	at org.apache.forrest.locationmap.LocationMapModule.getAttribute(LocationMapModule.java:203)
+	at org.apache.cocoon.components.treeprocessor.variables.PreparedVariableResolver.processModule(PreparedVariableResolver.java:246)
+	at org.apache.cocoon.components.treeprocessor.variables.PreparedVariableResolver.resolve(PreparedVariableResolver.java:197)
+	at org.apache.cocoon.components.treeprocessor.sitemap.SelectNode.invoke(SelectNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:155)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:95)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:292)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:223)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:289)
+	at org.apache.cocoon.Cocoon.process(Cocoon.java:557)
+	at org.apache.cocoon.bean.CocoonWrapper.getPage(CocoonWrapper.java:426)
+	at org.apache.cocoon.bean.CocoonBean.processTarget(CocoonBean.java:496)
+	at org.apache.cocoon.bean.CocoonBean.process(CocoonBean.java:357)
+	at org.apache.cocoon.Main.main(Main.java:311)
+Caused by: org.apache.excalibur.source.SourceNotFoundException: Exception during processing of cocoon://locationmap-project.xml
+	at org.apache.cocoon.components.source.impl.SitemapSource.getInputStream(SitemapSource.java:207)
+	at org.apache.forrest.locationmap.lm.MountNode.loadConfiguration(MountNode.java:125)
+	... 21 more
+Caused by: org.apache.cocoon.ResourceNotFoundException: Resource not found.
+	at <map:serialize type="xml"> - file:/export/crawlspace/hadoopqa/tools/buildtools/forrest/apache-forrest-0.8/main/webapp/./sitemap.xmap:364:36
+	at <map:generate> - file:/export/crawlspace/hadoopqa/tools/buildtools/forrest/apache-forrest-0.8/main/webapp/./sitemap.xmap:363:66
+	at org.apache.cocoon.components.source.SourceUtil.handle(SourceUtil.java:377)
+	at org.apache.cocoon.components.source.SourceUtil.getInputSource(SourceUtil.java:450)
+	at org.apache.cocoon.components.source.SourceUtil.parse(SourceUtil.java:281)
+	at org.apache.cocoon.generation.FileGenerator.generate(FileGenerator.java:118)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.processXMLPipeline(AbstractProcessingPipeline.java:537)
+	at org.apache.cocoon.components.pipeline.impl.AbstractCachingProcessingPipeline.processXMLPipeline(AbstractCachingProcessingPipeline.java:174)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.process(AbstractProcessingPipeline.java:437)
+	at org.apache.cocoon.components.source.impl.SitemapSource.getInputStream(SitemapSource.java:199)
+	... 22 more
+Caused by: org.apache.excalibur.source.SourceNotFoundException: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/content/locationmap.xml doesn't exist.
+	at org.apache.excalibur.source.impl.FileSource.getInputStream(FileSource.java:150)
+	at org.apache.cocoon.components.source.SourceUtil.getInputSource(SourceUtil.java:445)
+	... 28 more
+Caused by: java.io.FileNotFoundException: /home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/content/locationmap.xml (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.apache.excalibur.source.impl.FileSource.getInputStream(FileSource.java:146)
+	... 29 more
+WARN    (2009-09-01) 20:58.26:470   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: ComponentLocator exception from parent SM during lookup.
+org.apache.avalon.framework.service.ServiceException: Component for key 'org.apache.cocoon.generation.Generator/<aggregator>' not found. (Key='Cocoon')
+	at org.apache.cocoon.core.container.SingleComponentServiceManager.lookup(SingleComponentServiceManager.java:68)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.setGenerator(AbstractProcessingPipeline.java:211)
+	at org.apache.cocoon.components.pipeline.impl.AbstractCachingProcessingPipeline.setGenerator(AbstractCachingProcessingPipeline.java:134)
+	at org.apache.cocoon.components.treeprocessor.sitemap.AggregateNode.invoke(AggregateNode.java:89)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:55)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PreparableMatchNode.invoke(PreparableMatchNode.java:116)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:155)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:95)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:292)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:223)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:289)
+	at org.apache.cocoon.Cocoon.process(Cocoon.java:557)
+	at org.apache.cocoon.bean.CocoonWrapper.getPage(CocoonWrapper.java:426)
+	at org.apache.cocoon.bean.CocoonBean.processTarget(CocoonBean.java:496)
+	at org.apache.cocoon.bean.CocoonBean.process(CocoonBean.java:357)
+	at org.apache.cocoon.Main.main(Main.java:311)
+WARN    (2009-09-01) 20:58.26:521   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: ComponentLocator exception from parent SM during lookup.
+org.apache.avalon.framework.service.ServiceException: Component for key 'org.apache.cocoon.transformation.Transformer/<gatherer>' not found. (Key='Cocoon')
+	at org.apache.cocoon.core.container.SingleComponentServiceManager.lookup(SingleComponentServiceManager.java:68)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.core.container.CoreServiceManager.lookup(CoreServiceManager.java:355)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.addTransformer(AbstractProcessingPipeline.java:242)
+	at org.apache.cocoon.components.pipeline.impl.AbstractCachingProcessingPipeline.addTransformer(AbstractCachingProcessingPipeline.java:144)
+	at org.apache.cocoon.components.treeprocessor.sitemap.SerializeNode.invoke(SerializeNode.java:107)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.ContainerNode.invoke(ContainerNode.java:38)
+	at org.apache.cocoon.components.treeprocessor.CategoryNode.invokeByName(CategoryNode.java:66)
+	at org.apache.cocoon.components.treeprocessor.sitemap.CallNode.invoke(CallNode.java:83)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:55)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PreparableMatchNode.invoke(PreparableMatchNode.java:116)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:155)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:77)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:95)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:292)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:223)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:289)
+	at org.apache.cocoon.Cocoon.process(Cocoon.java:557)
+	at org.apache.cocoon.bean.CocoonWrapper.getPage(CocoonWrapper.java:426)
+	at org.apache.cocoon.bean.CocoonBean.processTarget(CocoonBean.java:496)
+	at org.apache.cocoon.bean.CocoonBean.process(CocoonBean.java:357)
+	at org.apache.cocoon.Main.main(Main.java:311)
+WARN    (2009-09-01) 20:58.28:528   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.29:512   [cocoon.manager] (Unknown-URI) Unknown-Thread/FOPSerializer: Attribute src of user-config element is deprecated. Provide Cocoon URI as value of the element instead
+WARN    (2009-09-01) 20:58.30:004   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.31:020   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.31:020   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.32:938   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.32:986   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.32:989   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.32:994   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:003   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:003   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:009   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:009   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:010   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:011   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:046   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:047   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:048   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:051   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:052   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:057   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:057   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:058   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:059   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:060   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.33:061   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+WARN    (2009-09-01) 20:58.33:185   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.33:677   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.33:678   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.33:994   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.34:023   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:025   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:025   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:026   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:027   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:027   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:028   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:029   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:044   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:045   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:045   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:046   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:046   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:046   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:084   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:085   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:085   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:086   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:086   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:089   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:089   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:090   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:091   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:091   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:092   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:092   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:093   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:094   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:094   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:095   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:096   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:097   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:097   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.34:098   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+WARN    (2009-09-01) 20:58.34:201   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.34:620   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.34:620   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.35:057   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.35:692   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.35:692   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.36:364   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.36:393   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.36:417   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.36:445   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.36:469   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.36:740   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.36:750   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.36:751   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.36:751   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.36:973   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.36:973   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.37:011   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.37:678   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.38:220   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.38:220   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.38:347   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.38:376   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.38:386   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.38:410   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:411   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:527   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:528   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:528   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:528   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:529   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:534   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:535   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:536   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:539   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:540   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.38:540   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+WARN    (2009-09-01) 20:58.38:600   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.38:610   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.38:631   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.38:645   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.38:898   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.38:898   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.38:962   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.39:830   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.40:495   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:496   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:497   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:497   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:498   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:498   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:498   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:499   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:499   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:499   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:500   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:501   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:501   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:501   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:502   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:502   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:505   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:512   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:513   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:513   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:513   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:514   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:514   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:514   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:515   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:515   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:515   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:516   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:516   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:517   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:517   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:518   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:518   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:518   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:519   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:519   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:520   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:520   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:521   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:521   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:521   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:734   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:735   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:735   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:735   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:736   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:736   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:932   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.40:934   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:934   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:934   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:934   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:935   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.40:963   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.40:998   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.41:076   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.41:077   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.41:077   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.41:077   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.41:087   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.41:087   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.41:127   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.41:128   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:306   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:306   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:307   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:307   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:307   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:307   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:308   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:308   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:309   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:309   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:309   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:310   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:310   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:310   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:311   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:311   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:311   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:312   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:312   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:313   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:313   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:313   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:314   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:314   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:315   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:315   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:315   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:316   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:316   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:317   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:317   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:320   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:320   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:320   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.42:321   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+WARN    (2009-09-01) 20:58.42:400   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.42:571   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.42:687   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.43:187   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.43:187   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.44:059   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.44:093   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:093   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+WARN    (2009-09-01) 20:58.44:252   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.44:475   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.44:475   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.44:566   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.44:614   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:614   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:614   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:620   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:625   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:677   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:704   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:704   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:772   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:773   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:773   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:774   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:774   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:775   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:775   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:775   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:776   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:776   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:776   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:777   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:777   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:777   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:778   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:778   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:785   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:786   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:788   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:788   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:788   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:789   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:789   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:790   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:790   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:791   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:791   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:791   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:792   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:792   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:792   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:793   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:793   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:793   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:835   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:836   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:842   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:843   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:849   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:849   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:849   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:850   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:850   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:850   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:851   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:857   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:857   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:858   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:858   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:858   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:859   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:872   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:872   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:891   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:891   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.44:891   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+WARN    (2009-09-01) 20:58.45:012   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:014   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:017   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:018   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:020   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:021   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:024   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:025   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:030   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:033   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:040   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:042   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:047   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:048   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:049   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:056   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:059   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:061   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:066   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:068   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:070   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:074   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:076   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:084   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:092   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:094   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:099   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:153   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:189   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.45:193   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.45:532   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.45:532   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.45:766   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+WARN    (2009-09-01) 20:58.45:835   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.46:113   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.46:114   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.46:428   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.46:522   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+WARN    (2009-09-01) 20:58.46:643   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.46:940   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.46:941   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.47:177   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.47:540   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.47:540   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.47:577   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.47:601   [cocoon.manager] (Unknown-URI) Unknown-Thread/SVGBuilder: setDocumentLocator was not called, will use http://localhost/ as base URI
+WARN    (2009-09-01) 20:58.47:632   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+WARN    (2009-09-01) 20:58.47:912   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.47:918   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.49:496   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.49:496   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.49:603   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.49:996   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.49:996   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.50:244   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.50:265   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:277   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:278   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:278   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:279   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: Error in space-after property value '6pt"': org.apache.fop.fo.expr.PropertyException: missing quote
+ERROR   (2009-09-01) 20:58.50:279   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:540   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.50:540   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.50:611   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.50:650   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:848   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:875   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:876   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:876   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:888   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:889   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:889   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:889   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:892   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:893   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:893   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:893   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:893   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:897   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:897   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:897   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.50:897   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+WARN    (2009-09-01) 20:58.50:981   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.50:987   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.50:999   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:003   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:009   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:018   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:033   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:047   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:077   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:081   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:084   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:101   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+WARN    (2009-09-01) 20:58.51:108   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/Table: table-layout=auto is not supported, using fixed!
+ERROR   (2009-09-01) 20:58.51:510   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.51:510   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.51:737   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.51:939   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.51:940   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.52:213   [cocoon.manager] (Unknown-URI) Unknown-Thread/TraxErrorListener: file:/home/oom/work/eclipse/hadoop-20/src/docs/cn/src/documentation/skins/pelt/xslt/fo/../../../common/xslt/fo/document-to-fo.xsl:148:19
+ERROR   (2009-09-01) 20:58.52:239   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:254   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:256   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:257   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:257   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:257   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:257   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:263   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:269   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:270   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:270   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:270   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:270   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:271   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:271   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:271   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:273   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:275   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:280   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:282   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:283   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:285   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:288   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:293   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:295   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:297   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:298   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:298   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:298   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:300   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:302   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:303   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: property 'fonts-family' ignored
+ERROR   (2009-09-01) 20:58.52:659   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find cvt table
+ERROR   (2009-09-01) 20:58.52:660   [cocoon.manager.fop] (Unknown-URI) Unknown-Thread/MessageHandler: TrueType warning: Can't find prep table
+WARN    (2009-09-01) 20:58.52:726   [cocoon.manager] (Unknown-URI) Unknown-Thread/TextSerializer: Encountered text before root element. Creating <text> wrapper element.
+WARN    (2009-09-01) 20:58.52:737   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:737   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:738   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:738   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:738   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:738   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:738   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:739   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:739   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:739   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:739   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:739   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:739   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.selection.SelectorSelector]
+WARN    (2009-09-01) 20:58.52:740   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:740   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.selection.Selector/parameter]
+WARN    (2009-09-01) 20:58.52:740   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.acting.ActionSelector]
+WARN    (2009-09-01) 20:58.52:740   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.acting.Action/sourcetype]
+WARN    (2009-09-01) 20:58.52:740   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:740   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:741   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:741   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.selection.Selector/config]
+WARN    (2009-09-01) 20:58.52:741   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.52:741   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.acting.Action/locale]
+WARN    (2009-09-01) 20:58.52:741   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.acting.ActionSelector]
+WARN    (2009-09-01) 20:58.52:742   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.selection.SelectorSelector]
+WARN    (2009-09-01) 20:58.56:035   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.treeprocessor.ProcessorComponentInfo]
+WARN    (2009-09-01) 20:58.56:035   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.excalibur.source.SourceResolver]
+WARN    (2009-09-01) 20:58.56:035   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.excalibur.xml.xpath.XPathProcessor]
+WARN    (2009-09-01) 20:58.56:035   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.excalibur.xml.sax.SAXParser]
+WARN    (2009-09-01) 20:58.56:035   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.excalibur.xml.EntityResolver]
+WARN    (2009-09-01) 20:58.56:035   [cocoon.manager] (Unknown-URI) Unknown-Thread/CoreServiceManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.modules.input.InputModuleSelector]

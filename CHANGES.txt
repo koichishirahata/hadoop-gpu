@@ -1,0 +1,33 @@
+hadoop-gpu change log
+
+2013-01-15
+add gpu executable feature into hadoop pipes
+modified following files
+
+Only in hadoop-gpu-0.20.1: kill
+Only in hadoop-gpu-0.20.1: kmeans1D-cpu.sh
+Only in hadoop-gpu-0.20.1: kmeans1D-gpu.sh
+Only in hadoop-gpu-0.20.1: kmeans1D.sh
+Only in hadoop-gpu-0.20.1: kmeans2D-cpu.sh
+Only in hadoop-gpu-0.20.1: kmeans2D-gpu.sh
+Only in hadoop-gpu-0.20.1: kmeans2D.sh
+Only in hadoop-gpu-0.20.1/src/core/org/apache/hadoop/fs: lustre
+hadoop-gpu-0.20.1/src/docs/cn/src/documentation/sitemap.xmap differ
+hadoop-gpu-0.20.1/src/docs/cn/uming.conf differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/JobConf.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/JobInProgress.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/JobQueueTaskScheduler.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/JobTracker.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/MapTask.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/MapTaskStatus.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/pipes/Application.java differ
+Only in hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/pipes: PipesGPUMapRunner.java
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/pipes/Submitter.java differ
+Only in hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/pipes: SubmitterToAccels.java
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/TaskGraphServlet.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/Task.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/TaskReport.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/TaskStatus.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/TaskTracker.java differ
+hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred/TaskTrackerStatus.java differ
