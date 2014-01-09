@@ -11,6 +11,8 @@ This software modified and includes Hadoop-0.20.1, The [Apache Software Foundati
 hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred)
 * **Add dynamic hybrid task scheduling feature** on Hadoop (in hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred)
 
+![](https://raw.github.com/koichi626/hadoop-gpu/master/img/hadoop-hybrid.png)
+
 Please read CHANGES.txt to find more detailed modifications.
 
 ##Installation and Setup
