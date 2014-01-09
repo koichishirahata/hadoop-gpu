@@ -11,6 +11,7 @@ This software modified and includes Hadoop-0.20.1, The [Apache Software Foundati
 hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred)
 * **Add dynamic hybrid task scheduling feature** on Hadoop (in hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred)
 
+The image is our customized web interface, in which blue bars show tasks running on CPU, and green bars show tasks running on GPU.
 ![](https://raw.github.com/koichi626/hadoop-gpu/master/img/hadoop-hybrid.png)
 
 Please read CHANGES.txt to find more detailed modifications.
@@ -69,5 +70,5 @@ Please read CHANGES.txt to find more detailed modifications.
 All Koichi Shirahata offered code is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). And others follow the original license announcement.
 
 ##Copyright
-* Copyright (C) 2013 [Koichi Shirahata](http://matsu-www.is.titech.ac.jp/~koichi-s/>) All Rights Reserved.
+* Copyright (C) 2013 - 2014 [Koichi Shirahata](http://matsu-www.is.titech.ac.jp/~koichi-s/>) All Rights Reserved.
 
