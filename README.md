@@ -11,6 +11,9 @@ This software modified and includes Hadoop-0.20.1, The [Apache Software Foundati
 hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred)
 * **Add dynamic hybrid task scheduling feature** on Hadoop (in hadoop-gpu-0.20.1/src/mapred/org/apache/hadoop/mapred)
 
+You can watch a movie which shows k-means application is running on both CPU and GPU from the following URL.
+<http://www.youtube.com/watch?v=4CFGR0TFcNA>
+
 The image is our customized web interface, in which blue bars show tasks running on CPU, and green bars show tasks running on GPU.
 ![](https://raw.github.com/koichi626/hadoop-gpu/master/img/hadoop-hybrid.png)
 
